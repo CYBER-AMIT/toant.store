@@ -1,0 +1,460 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #6d28d9, #9333ea);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    width: 95%;
+    max-width: 650px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    padding-top: 40px; /* Space for the back arrow */
+}
+
+/* Back Arrow Style */
+.back-arrow {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.8em;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+    color: #00ffff;
+}
+
+.task-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    flex-grow: 1;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #ff9800, #f44336);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Button Gradients */
+.btn-daily {
+     background: linear-gradient(45deg, #2196f3, #00bcd4);
+}
+
+.btn-toant {
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+}
+
+.btn-partner {
+    background: linear-gradient(45deg, #4caf50, #8bc34a);
+}
+
+.btn:hover:not(:disabled) {
+     filter: brightness(1.1);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the selected button */
+.btn.selected {
+    opacity: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Style for disabled button */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    background: #555;
+}
+
+
+/* Task Content Sections */
+.task-content-section {
+     margin-top: 20px;
+     display: none;
+     width: 100%;
+}
+
+#dailyTasks.task-content-section {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+
+.daily-coin-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+
+/* Daily Task Box Style */
+.daily-task-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9em;
+    cursor: pointer; /* Default cursor */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: auto; /* Default to clickable */
+    box-shadow:  red;
+}
+
+.daily-task-box:hover:not(.claimed):not(.locked) { /* Only hover if not claimed or locked */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.daily-task-box strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Style for claimed or locked daily task box */
+.daily-task-box.claimed,
+.daily-task-box.locked {
+     background-color: rgba(255, 255, 255, 0.05); /* Dim background for claimed/locked */
+     cursor: default;
+     color: rgba(255, 255, 255, 0.5); /* Dim text color */
+     border-color: rgba(255, 255, 255, 0.1);
+     pointer-events: none; /* Not clickable */
+}
+
+ .daily-task-box.claimed {
+    background: linear-gradient(45deg, #4caf50, #8bc34a); /* Green gradient for claimed */
+    color: #ffffff; /* White text for claimed */
+     border-color: transparent;
+     pointer-events: none; /* Still not clickable after claiming */
+ }
+
+ /* Style for the NEXT available daily task box (after cooldown) */
+ .daily-task-box.available {
+     background: linear-gradient(45deg, #ffeb3b, #ffc107); /* Yellow/Orange gradient to highlight */
+     color: #333; /* Dark text for contrast */
+     cursor: pointer;
+     pointer-events: auto; /* Make clickable */
+     font-weight: 700;
+     
+ }
+
+ .daily-task-box.available:hover {
+     filter: brightness(1.1);
+ }
+
+
+#toantTasks.task-content-section,
+#partnerTasks.task-content-section {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.task-list-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.task-list-info {
+    text-align: left;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.task-list-info strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+
+.task-list-info span {
+    font-size: 0.9em;
+    color: #eeeeee;
+}
+
+.start-button {
+    background: linear-gradient(45deg, #ffeb3b, #ffc107);
+    color: #333;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Quiz Section Styles */
+.quiz-section {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-section h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.quiz-image-container {
+     width: 100%;
+     margin-bottom: 15px;
+     text-align: center;
+}
+
+.quiz-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.answer-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.answer-box {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    caret-color: #00ffff;
+    transition: all 0.3s ease;
+}
+
+.answer-box:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#submitAnswerBtn {
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+     margin-bottom: 10px;
+}
+
+#submitAnswerBtn:hover:not(:disabled) {
+    background: linear-gradient(45deg, #00c6ff, #007bff);
+    box-shadow: 0 6px 12px rgba(0, 198, 255, 0.4);
+}
+
+ #submitAnswerBtn:disabled {
+    background: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+ }
+
+.cooldown-message {
+    color: #ffeb3b;
+    font-size: 0.9em;
+    margin-top: 5px;
+    min-height: 1em;
+}
+
+/* Daily Task Cooldown Message */
+ #dailyTaskCooldownMessage {
+     color: #ffeb3b; /* Yellow color */
+     font-size: 1em;
+     margin-top: -10px; /* Adjust positioning */
+     margin-bottom: 10px;
+     min-height: 1.2em; /* Ensure space is reserved */
+ }
+
+
+/* Submission Success Message Style */
+.submission-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #4caf50, #8bc34a);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
+    font-weight: normal;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    will-change: transform, opacity;
+    animation: none;
+}
+
+.submission-message.show {
+    animation: pop-in-glow 2s ease-out forwards;
+    visibility: visible;
+}
+
+/* Animation Keyframes */
+@keyframes pop-in-glow {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+}
+
+
+/* Particle Animation */
+.particle-container {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     pointer-events: none;
+     z-index: 10;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #ffeb3b;
+    border-radius: 50%;
+    animation: spread-and-fade 1s ease-out forwards;
+}
+
+@keyframes spread-and-fade {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--dx), var(--dy)) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* --- Responsiveness --- */
+ @media (max-width: 480px) {
+     .task-title {
+         font-size: 2em;
+     }
+
+     .daily-coin-boxes {
+         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+     }
+
+     .daily-task-box {
+         padding: 10px;
+     }
+
+     .answer-box {
+         width: 35px;
+         height: 35px;
+         font-size: 1.3em;
+     }
+
+      #submitAnswerBtn {
+         padding: 10px 20px;
+         font-size: 1em;
+     }
+
+      .submission-message {
+         font-size: 1.2em;
+         padding: 15px 20px;
+     }
+ }

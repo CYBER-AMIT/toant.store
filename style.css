@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right,  rgb(129, 13, 18), #4b127a , rgb(12, 55, 119));
+  color: white;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  background-color: rgb(241, 182, 192);
+  border-radius: 6px;
+  color: black;
+  box-shadow: 0 0 0 2.8px white;
+  font-size:20px ;
+font-weight: bold;
+padding: 8px;
+}
+html{
+  scroll-behavior: smooth;
+}
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-buttons a {
+  color: black;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.login{
+
+ background-color:#40a1ca;
+ color: black; 
+ padding: 14px 37px;
+ margin-right: 20px;
+ cursor:pointer;
+transition: 0.3s;
+font-size: 2rem;
+box-shadow: 0 0 0 2.8px white;
+border-radius: 5px;
+height: 50px;
+width: 120px;
+
+
+}
+
+.login:hover{
+  background-image:linear-gradient(to right, rgb(20, 167, 224) , rgb(19, 19, 160));
+  color: white;
+  box-shadow: 0 0 0 2px pink;
+  margin-left: 20px;
+  padding: 8.5px 28px;
+  border-radius: 45px;
+  height: 40px;
+ width: 100px;
+ height: 40px;
+ width: 100px;
+ font-size: 0.95rem;
+}
+
+.register-btn {
+  background-color: #19d131;
+  color: black;
+  margin-right: 20px;
+  padding: 8px 20px;
+  border: none;
+  box-shadow: 0 0 0 2.8px white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  height: 50px;
+  width: 120px;
+}
+
+.register-btn:hover {
+  background-image:linear-gradient(to right, rgb(20, 167, 224) , rgb(19, 19, 160 ));
+  color: white;
+  box-shadow: 0 0 0 2px pink;
+  border-radius: 45px;
+  height: 40px;
+  width: 100px;
+  font-size: 0.95rem;
+  margin-left: 20px;
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 600px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.discount-banner {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+}
+
+.try-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.try-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(0, 0, 255, 0.3));
+
+}
+
+/* Slider Styles */
+.slider-container {
+  overflow: hidden;
+  margin: 40px 0;
+  background-image: linear-gradient(to left , rgba(29, 28, 28, 0.26), rgb(223, 47, 47), rgba(29, 28, 28, 0.26));
+  border-radius: 10px;
+}
+.slider {
+  display: flex;
+  gap: 20px;
+  animation: slideAnimation 10s linear infinite;
+}
+.slide {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+.slide img {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+@keyframes slideAnimation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Info Section */
+.info-section {
+  padding: 60px 20px;
+background-image: -moz-linear-gradient(to right , blue,green);
+}
+.info-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+.info-content p {
+  flex: 1;
+  min-width: 250px;
+  font-size: 1.1em;
+}
+.info-content img {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 10px;
+}
+.section-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+ 
+
+/* ---- Stats Section ---- */
+.stats {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(202, 0, 0, 0.05);
+  flex-wrap: wrap;
+  gap: 30px;
+  border-radius: 10px;
+}
+
+.stat-box {
+  min-width: 150px;
+  max-width: 100%;
+}
+.stat-box h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-box p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---- FOR ARIDROP STARTS IN ---- */
+
+.bottom-section{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  padding-left: 240px ;
+  padding-right: 540px;
+  justify-content: space-between;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 24px;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+.countdown {
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-family: 'Courier New', monospace;
+  font-size: 50px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  
+}
+
+.slots-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+
+.info-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.info-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-text h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.info-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.info-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: right;
+}
+
+.info-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ---- responsive ---- */ 
+/* ---- Responsive Breakpoints ---- */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 80px 60px;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .auth-buttons {
+    gap: 20px;
+  }
+}
+
+/* Tablet & small desktop (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .bottom-section {
+    padding: 0 40px;
+    justify-content: center;
+  }
+
+  .login,
+  .register-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+    width: auto;
+    height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile & smaller tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-links,
+  .auth-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  #timer {
+    font-size: 36px;
+    padding: 8px;
+  }
+
+  .login,
+  .register-btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  #timer {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-image {
+    text-align: center;
+  }
+
+  .info-text h2 {
+    font-size: 26px;
+  }
+
+  .info-text p {
+    font-size: 16px;
+  }
+}
+
+
+
+
+/* ----- Login page ---- */
+
+@import url("https://fonts-googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");

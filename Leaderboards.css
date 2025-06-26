@@ -1,0 +1,540 @@
+ /* Leaderboards css Code */
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+/* Top 3 Players Showcase */
+.top-three-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
+    height: 150px;
+}
+
+.top-player-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 110px;
+    position: relative;
+}
+
+.top-player-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 6px;
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.medal-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.gold-badge {
+    background: linear-gradient(135deg, #ffd700, #daa520);
+    color: #000;
+}
+
+.silver-badge {
+    background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+    color: #000;
+}
+
+.bronze-badge {
+    background: linear-gradient(135deg, #cd7f32, #a67c52);
+    color: #000;
+}
+
+.top-player-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top-player-stats {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.top-player-stat-value {
+    font-weight: 700;
+    color: #4cc9f0;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Positioning for top 3 */
+.second-place {
+    height: 130px;
+}
+
+.first-place {
+    height: 150px;
+    order: 2;
+    background: rgba(255, 255, 255, 0.1);
+    width: 120px;
+}
+
+.third-place {
+    height: 130px;
+    order: 3;
+}
+
+/* Total Players Line */
+.total-players-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.total-players-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.total-players-count {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4cc9f0;
+}
+
+/* Button Row */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.rank-button {
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+    flex: 1;
+}
+
+.salary-button {
+    background: linear-gradient(135deg, #f72585, #b5179e);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(247, 37, 133, 0.3);
+    flex: 1;
+}
+
+/* Leaderboard */
+.leaderboard-container {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.leaderboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.leaderboard-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4cc9f0, #4361ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.column-headers {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.header-name {
+    flex: 2;
+    padding-left: 30px;
+}
+
+.header-coins {
+    flex: 1;
+    text-align: center;
+}
+
+.header-rank {
+    flex: 1;
+    text-align: center;
+}
+
+.player-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.player-rank {
+    font-weight: 700;
+    color: #4cc9f0;
+    width: 25px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.player-name {
+    flex: 2;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+}
+
+.medal-icon {
+    font-size: 0.7rem;
+    margin-left: 4px;
+}
+
+.gold-icon {
+    color: #ffd700;
+}
+
+.silver-icon {
+    color: #c0c0c0;
+}
+
+.bronze-icon {
+    color: #cd7f32;
+}
+
+.player-coins {
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4cc9f0;
+}
+
+.player-rank-value {
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Current Player */
+.current-player {
+    background: rgba(76, 201, 240, 0.1);
+    border: 1px solid rgba(76, 201, 240, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+.current-player-title {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: #4cc9f0;
+}
+
+/* Salary Achievement Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #4cc9f0;
+    border: none;
+    color: #000;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+/* Salary Achievement Header Box */
+.salary-title-box {
+    background: linear-gradient(135deg, #4361ee, #3f37c9);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+}
+
+.salary-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
+/* Salary Achievement Styles */
+.salary-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.salary-tab {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    min-width: 70px;
+    text-align: center;
+}
+
+.salary-tab.active {
+    background: linear-gradient(135deg, #f72585, #b5179e);
+    box-shadow: 0 4px 8px rgba(247, 37, 133, 0.3);
+}
+
+.salary-tab:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.salary-achievements {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.salary-header-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.salary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+}
+
+.salary-name {
+    flex: 2;
+    font-weight: 500;
+    color: #f8f8f8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.salary-amount {
+    flex: 1;
+    text-align: center;
+    color: #4cc9f0;
+    font-weight: 600;
+}
+
+.salary-rank {
+    flex: 1;
+    text-align: center;
+}
+
+.rank-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 50px;
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.rank-1 {
+    background: linear-gradient(135deg, #ffd700, #daa520);
+    color: #000;
+}
+
+.rank-2 {
+    background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+    color: #000;
+}
+
+.rank-3 {
+    background: linear-gradient(135deg, #cd7f32, #a67c52);
+    color: #000;
+}
+
+.rank-other {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+}
+
+.modal-image-container {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.modal-image-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .top-three-container {
+        height: 140px;
+        gap: 8px;
+    }
+    
+    .first-place {
+        width: 110px;
+        height: 140px;
+    }
+    
+    .second-place, .third-place {
+        width: 90px;
+        height: 120px;
+    }
+    
+    .top-player-avatar {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .column-headers {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+    }
+    
+    .player-card {
+        padding: 6px 8px;
+    }
+    
+    .back-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+    
+    .salary-title {
+        font-size: 1.1rem;
+    }
+}
