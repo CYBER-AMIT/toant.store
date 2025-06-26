@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> TOANT </title>
+  <link rel="stylesheet" href="/Clint/assest/css/style.css" />
+</head>
+<body>
+ 
+  <!-- Navbar --> 
+  <header class="navbar">
+    <div class="logo"> TOANT<img src="/Clint/assest/images/coin_logo.jpg" alt="" style="height: 100px; width: 100px; border-radius: 50%;">  </div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#Features">Features</a>
+      <a href="#About">About Us</a>
+      <a href="#Our-Mission">Our Mission</a>
+      <a href="#Our-Vision">Our Vision</a>
+      <a href="#"  onclick="getsupport()" > support </a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="#" class="login" onclick="login(event)">Login</a>
+      <button class="register-btn" onclick="Register(event)"> Register </button>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="discount-banner">Don't  Just Watch Others Get Rich - start Mining Toant Today!</div>
+      <h1>Mine Toant Coin — No Investment, Only Unlimited Earning! Fastest, Most Secure & Highest Profit Mining Platform Built for Smart Miners</h1>
+      <p>Secure your future with the fastest-growing mining community — start now without spending a dollar. Thousands already mining. Be the next success story with Toant..!</p>
+      <button class="try-btn" onclick="tryNow()">▶ Stat Mining for SUCCESS</button>
+    </div>
+    <div class="hero-image">
+      <img src="/Clint/assest/images/hero-video.mp4" alt="Crypto Illustration" />
+    </div>
+  </section>
+
+<!-- Why Joined Today Section -->
+<section id="why-joined" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 60px 20px;">
+  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+    <div style="flex: 1; min-width: 250px;">
+      <h2 style="font-size: 2.5em;">Why Join Toant Today?</h2>
+      <p style="font-size: 1.2em;">Start mining for free. Secure, fast & built for the future.</p>
+    </div>
+    <div style="flex: 1; min-width: 250px;">
+      <!-- Placeholder for Image -->
+      <img src="/Clint/assest/images/hero-img4.jpg" alt="Why Join" style="max-width: 100%; border-radius: 10px;">
+    </div>
+  </div>
+
+  <!-- Slider -->
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide"><img src="/Clint/assest/images/BTC_LOGO.jpg" alt="BTC"><p>BTC</p></div>
+      <div class="slide"><img src="/Clint/assest/images/ETH_LOGO.jpg" alt="ETH"><p>ETH</p></div>
+      <div class="slide"><img src="/Clint/assest/images/coin_logo.jpg" alt="TOANT"><p>TOANT</p></div>
+      <div class="slide"><img src="/Clint/assest/images/BNB_LOGO.jpg" alt="BNB"><p>BNB</p></div>
+      <div class="slide"><img src="/Clint/assest/images/SOL_LOGO.jpg" alt="SOL"><p>SOL</p></div>
+      <div class="slide"><img src="/Clint/assest/images/coin_logo.jpg" alt="TOANT"><p>TOANT</p></div>
+      <div class="slide"><img src="/Clint/assest/images/TON_LOGO.jpg" alt="TON"><p>TON</p></div>
+      <div class="slide" style="margin-top: 18px;"><img src="/Clint/assest/images/XRP_LOGO.jpg" alt="XRP"><p>XRP</p></div>
+      <div class="slide"><img src="/Clint/assest/images/coin_logo.jpg" alt="TOANT"><p>TOANT</p></div>
+      <div class="slide"style="margin-top: 20px;"><img src="/Clint/assest/images/DOGE_LOGO.jpg" alt="DOGE"><p>DOGE</p></div>
+      <div class="slide"><img src="/Clint/assest/images/BTC_LOGO.jpg" alt="BTC"><p>BTC</p></div>
+      <div class="slide"><img src="/Clint/assest/images/ETH_LOGO.jpg" alt="ETH"><p>ETH</p></div>
+      <div class="slide"><img src="/Clint/assest/images/coin_logo.jpg" alt="TOANT"><p>TOANT</p></div>
+      <div class="slide"><img src="/Clint/assest/images/BNB_LOGO.jpg" alt="BNB"><p>BNB</p></div>
+      <div class="slide"><img src="/Clint/assest/images/SOL_LOGO.jpg" alt="SOL"><p>SOL</p></div>
+      <div class="slide"><img src="/Clint/assest/images/coin_logo.jpg" alt="TOANT"><p>TOANT</p></div>
+      <div class="slide"><img src="/Clint/assest/images/TON_LOGO.jpg" alt="TON"><p>TON</p></div>
+      <div class="slide"style="margin-top: 18px;"><img src="/Clint/assest/images/XRP_LOGO.jpg" alt="XRP"><p>XRP</p></div>
+      <div class="slide"><img src="/Clint/assest/images/coin_logo.jpg" alt="TOANT"><p>TOANT</p></div>
+      <div class="slide"style="margin-top: 20px;"><img src="/Clint/assest/images/DOGE_LOGO.jpg" alt="DOGE"><p>DOGE</p></div>
+
+    </div>
+  </div>
+
+  <!-- Video Placeholder -->
+  <div style="margin-top: 40px; text-align: center;">
+    <h3>Watch How It Works</h3>
+    <video width="100%" controls style="max-width: 800px; border-radius: 10px;">
+      <source src="/Clint/assest/images/hero-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+
+  <!-- Stats Section -->
+  
+  <section id="statsd" class="stats">
+    <section class="stats">
+    <div class="stat-box">
+      <h2> 25M </h2>
+      <p>Total User's</p>    
+    </div>
+    <div class="stat-box">
+      <h2> 100k+ </h2>
+      <p>Trusted Wallets Investor</p>
+    </div> 
+    <div class="stat-box">
+        <h2> 580$ </h2>
+        <p>Total Found</p>
+      </div>
+    <div class="stat-box">
+      <h2>195</h2>
+      <p>Countries Supported</p>
+    </div>
+  </section>
+
+  
+<div class="bottom-section" >
+ <div class="features">
+    <div class="feature">🔒 Secure</div>
+    <div class="feature">⚡ Fast</div>
+    <div class="feature">🌐 Global</div>
+    <div class="feature">🌐 Next Big Crypto </div>
+  </div>
+
+  <div class="countdown">
+    <p>FOR ARIDROP END IN</p>
+    <div id="timer"> 00 : 00 : 00 : 00 </div>
+  </div>
+</div>
+
+
+<section id="Features" class="info-section">
+  <div class="info-container">
+    <div class="info-text">
+      <h2>Features</h2>
+      <p>Our platform is built with cutting-edge technology to ensure secure, fast, and effortless mining. With zero investment, enjoy unlimited earning!</p>
+    </div>
+    <div class="info-image">
+      <img src="/Clint/assest/images/hero-img4.jpg" alt="Features Image">
+    </div>
+  </div>
+</section>
+<section id="About" class="info-section">
+  <div class="info-container">
+    <div class="info-text">
+      <h2>About US</h2>
+      <p>At Toant, we are not just building a cryptocurrency—we are shaping a new future where every second of your time matters, and every click creates a ripple of opportunity. Our team from India, the USA, and Dubai comes together under one vision: to make financial freedom real, reachable, and rewarding for everyone.
+
+In a world where millions are overlooked, Toant opens the door to earning, growing, and thriving—whether you're a student, a dreamer, or someone who just wants a better tomorrow. With zero investment, free mining, and smart tasks, we put the power of blockchain into your hands—because we believe you matter.</p>
+    </div>
+    <div class="info-image">
+      <img src="/client/assets/images/features.jpg" alt="Features Image">
+    </div>
+  </div>
+</section>
+<section id="Our-Mission" class="info-section">
+  <div class="info-container">
+    <div class="info-text">
+      <h2>Our Mission</h2>
+      <p>Toant's mission is to redefine digital earning by building a cryptocurrency platform that is 100% secure, 100% free, and 100% focused on your success. We aim to make crypto accessible to all, especially those who have been left behind by the traditional economy.
+
+We are here to build a future where trust is earned, opportunities are distributed fairly, and every person can earn with dignity—no scams, no risks, just a clear path to growth. With every feature we create, we stay committed to honesty, transparency, and purpose.
+</p>
+    </div>
+    <div class="info-image">
+      <img src="/client/assets/images/features.jpg" alt="Features Image">
+    </div>
+  </div>
+</section>
+<section id="Our-Vision" class="info-section">
+  <div class="info-container">
+    <div class="info-text">
+      <h2>Our Vision</h2>
+      <p>We dream of a world where Toant Coin becomes the #1 cryptocurrency people use in everyday life. Not just trading online—but paying for meals, transport, medical care, even rent. We imagine a day when Toant is used to help the needy, empower the hardworking, and support honest living.
+
+We don’t want Toant to be just another coin; we want it to be a symbol of hope—built with technology, driven by ethics, and backed by real human stories.</p>
+    </div>
+    <div class="info-image">
+      <img src="/client/assets/images/features.jpg" alt="Features Image">
+    </div>
+  </div>
+</section>
+
+
+
+  <script src="/Clint/assest/js/main.js"></script>
+</body>
+</html>
