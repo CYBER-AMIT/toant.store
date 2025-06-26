@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Mania Enhanced</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Clint/assest/css/Leaderboards.css">
+</head>
+<body>
+    <!-- Top 3 Players Showcase -->
+    <div class="top-three-container" id="topThreeContainer">
+        <!-- 2nd place -->
+        <div class="top-player-card second-place" id="secondPlace">
+            <div class="top-player-avatar" id="secondPlaceAvatar">P</div>
+            <h3 class="top-player-name" id="secondPlaceName">Player2</h3>
+            <div class="top-player-stats">
+                <div class="top-player-stat-value" id="secondPlaceCoins">8,742</div>
+            </div>
+        </div>
+        <!-- 1st place -->
+        <div class="top-player-card first-place" id="firstPlace">
+            <div class="top-player-avatar" id="firstPlaceAvatar">P</div>
+            <h3 class="top-player-name" id="firstPlaceName">Player1</h3>
+            <div class="top-player-stats">
+                <div class="top-player-stat-value" id="firstPlaceCoins">9,876</div>
+            </div>
+        </div>
+        <!-- 3rd place -->
+        <div class="top-player-card third-place" id="thirdPlace">
+            <div class="top-player-avatar" id="thirdPlaceAvatar">P</div>
+            <h3 class="top-player-name" id="thirdPlaceName">Player3</h3>
+            <div class="top-player-stats">
+                <div class="top-player-stat-value" id="thirdPlaceCoins">8,521</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Players Line -->
+    <div class="total-players-line">
+        <span class="total-players-label">Total Players</span>
+        <span class="total-players-count" id="totalUsers">12,845</span>
+    </div>
+
+    <!-- Button Row -->
+    <div class="button-row">
+        <button class="rank-button">
+            <i class="fas fa-trophy"></i> Rank
+        </button>
+        <button class="salary-button" id="salaryButton">
+            <i class="fas fa-money-bill-wave"></i> Salary Achievement
+        </button>
+    </div>
+
+    <!-- Leaderboard -->
+     <button class="back-btn" id="backToMain2">&larr;</button>
+    <div class="leaderboard-container">
+        <div class="leaderboard-header">
+            <h2 class="leaderboard-title">Leaderboard</h2>
+        </div>
+
+        <div class="column-headers">
+            <div class="header-name">Name</div>
+            <div class="header-coins">Coins</div>
+            <div class="header-rank">#Rank</div>
+        </div>
+
+        <div class="top-players" id="topPlayers">
+            <!-- Top 100 players will be inserted here -->
+        </div>
+
+        <div class="current-player" id="currentPlayer">
+            <h3 class="current-player-title">My Rank</h3>
+            <div id="currentPlayerInfo"></div>
+        </div>
+    </div>
+
+    <!-- Salary Achievement Modal -->
+    <div class="modal-overlay" id="salaryModal"  >
+        <div class="modal-content">
+            <button class="back-btn" id="backToMain">&larr;</button>
+
+            <div class="modal-image-container">
+                <div class="modal-image-placeholder">Custom Image Placeholder</div>
+            </div>
+
+            <div class="salary-title-box">
+                <h1 class="salary-title">Salary Achievement</h1>
+            </div>
+
+            <div class="salary-tabs">
+                <button class="salary-tab active" data-tab="weekly">7 Days</button>
+                <button class="salary-tab" data-tab="sixteen-days">16 Days</button>
+                <button class="salary-tab" data-tab="monthly">1 Month</button>
+            </div>
+
+            <div class="salary-achievements">
+                <div class="salary-header-row">
+                    <div class="salary-name">Name</div>
+                    <div class="salary-amount">Amount</div>
+                    <div class="salary-rank">#Rank</div>
+                </div>
+
+                <div id="weekly-achievements"></div>
+                <div id="sixteen-days-achievements" style="display: none;"></div>
+                <div id="monthly-achievements" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Clint/assest/js/Leaderboards.js"></script>
+</body>
+</html>

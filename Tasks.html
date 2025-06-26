@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Tasks & Quiz - Earn Rewards</title>
+    <meta name="description" content="Complete daily tasks and solve quizzes to earn free rewards on our platform. Get started today!">
+    <meta name="keywords" content="daily tasks, quiz, earn rewards, online tasks, free coins, get rewards">
+    <meta name="author" content="Your Platform Name">
+    <link rel="stylesheet" href="/Clint/assest/css/Tasks.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-arrow"onclick="backBtn(event)">
+             <i class="fas fa-arrow-left"></i>
+        </div> 
+
+        <div class="task-title">
+            Tasks
+        </div>
+        <div class="button-container">
+            <button class="btn btn-daily" id="dailyBtn" onclick="selectButton('daily')">Daily</button>
+            <button class="btn btn-toant" id="toantBtn" onclick="selectButton('toant')">Toant</button>
+            <button class="btn btn-partner" id="partnerBtn" onclick="selectButton('partner')">Partner</button>
+        </div>
+
+        <div id="dailyTasks" class="task-content-section">
+             <div id="dailyTaskCooldownMessage"></div>
+            <div class="daily-coin-boxes">
+                <div class="daily-task-box" data-day="1">
+                    <strong>Day 1 -</strong> Reward: 260 COINS
+                </div>
+                <div class="daily-task-box" data-day="2">
+                    <strong>Day 2 -</strong> Reward: 2000 COINS
+                </div>
+                <div class="daily-task-box" data-day="3">
+                    <strong>Day 3 -</strong> Reward: 6000 COINS
+                </div>
+                <div class="daily-task-box" data-day="4">
+                    <strong>Day 4 -</strong> Reward: 12000 COINS
+                </div>
+                <div class="daily-task-box" data-day="5">
+                    <strong>Day 5 -</strong> Reward: 16000 COINS
+                </div>
+                <div class="daily-task-box" data-day="6">
+                    <strong>Day 6 -</strong> Reward: 20000 COINS
+                </div>
+                <div class="daily-task-box" data-day="7">
+                    <strong>Day 7 -</strong> Reward: 200000 COINS
+                </div>
+                </div>
+
+            <div class="quiz-section">
+                <h3>Daily Quiz</h3>
+                <div class="quiz-image-container">
+                    <img id="quizImage" src="/Clint/assest/images/Coin logo.jpg" alt="Quiz Image Placeholder">
+                </div>
+                <div class="answer-inputs">
+                    <input type="text" class="answer-box" maxlength="1">
+                    <input type="text" class="answer-box" maxlength="1">
+                    <input type="text" class="answer-box" maxlength="1">
+                    <input type="text" class="answer-box" maxlength="1">
+                    <input type="text" class="answer-box" maxlength="1">
+                    <input type="text" class="answer-box" maxlength="1">
+                </div>
+                <button id="submitAnswerBtn">Submit Answer</button>
+                <div id="cooldownMessage" class="cooldown-message"></div>
+            </div>
+        </div>
+
+        <div id="toantTasks" class="task-content-section">
+             <div class="task-list-item">
+                 <div class="task-list-info">
+                     <strong>Join Telegram Channel</strong>
+                     <span>50</span>
+                 </div>
+                 <button class="start-button">Start</button>
+             </div>
+              <div class="task-list-item">
+                 <div class="task-list-info">
+                     <strong>Hemlo</strong>
+                     <span>5000</span>
+                 </div>
+                 <button class="start-button">Start</button>
+             </div>
+              <div class="task-list-item">
+                 <div class="task-list-info">
+                     <strong>Subscribers Official Channel</strong>
+                     <span>6000</span>
+                 </div>
+                 <button class="start-button">Start</button>
+             </div>
+              <div class="task-list-item">
+                 <div class="task-list-info">
+                     <strong>Subscribers Official Channel</strong>
+                     <span>6000</span>
+                 </div>
+                 <button class="start-button">Start</button>
+             </div>
+              <div class="task-list-item">
+                 <div class="task-list-info">
+                     <strong>Subscribers Official Channel</strong>
+                     <span>6000</span>
+                 </div>
+                 <button class="start-button">Start</button>
+             </div>
+              <div class="task-list-item">
+                 <div class="task-list-info">
+                     <strong>Subscribers Official Channel</strong>
+                     <span>6000</span>
+                 </div>
+                 <button class="start-button">Start</button>
+             </div>
+             </div>
+
+         <div id="partnerTasks" class="task-content-section">
+             <div class="task-list-item">
+                 <div class="task-list-info">
+                     <strong>Partner Task Example 1</strong>
+                     <span>Reward: 100</span>
+                 </div>
+                 <button class="start-button">Start</button>
+             </div>
+              <div class="task-list-item">
+                 <div class="task-list-info">
+                     <strong>Partner Task Example 2</strong>
+                     <span>Reward: 200</span>
+                 </div>
+                 <button class="start-button">Start</button>
+             </div>
+             </div>
+
+    </div>
+
+    <div id="submissionMessage" class="submission-message">
+        Quizzed Submitted Successful.
+    </div>
+
+    <script src="/Clint/assest/js/Tasks.js">
+        
+    </script>
+</body>
+</html>

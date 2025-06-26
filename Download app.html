@@ -1,0 +1,735 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Our Mobile App – Unlock Your Earnings!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS styles go here */
+        :root {
+            --primary-color: #00bcd4;  
+            --secondary-color: #0097a7;  
+            --accent-color: #ffd700;  
+            --text-color: #e0e0e0;  
+            --background-color: #1a1a2e;  
+            --card-background: #2a2a4e; 
+            --border-color: #4a4a6e;
+            --gradient-start: #0f2027;  
+            --gradient-end: #203a43; 
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;  
+            background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            overflow-x: hidden; 
+        }
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #4cc9f0;
+    border: none;
+    color: #000;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: var(--card-background);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-sizing: border-box;  
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+        }
+
+        h2 {
+            font-size: 2.2em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            color: var(--accent-color);  
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        section {
+            margin-bottom: 40px;
+            text-align: left;  
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1em;
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+            background-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        ul li strong {
+            color: var(--accent-color);
+        }
+
+        /* Download Buttons */
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 30px;
+            border-radius: 10px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            min-width: 250px;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;  
+        }
+
+        .button.android {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+        }
+
+        .button.ios {
+            background: linear-gradient(135deg, #007AFF, #0056B3);
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* QR Codes */
+        .qr-codes {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .qr-item {
+            background-color: var(--card-background);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-sizing: border-box;
+        }
+
+        .qr-item img {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #fff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .qr-item p {
+            font-size: 1em;
+            color: var(--text-color);
+            margin-top: 10px;
+        }
+
+        /* Installation Guide */
+        .installation-guide ol {
+            list-style: decimal;
+            padding-left: 25px;
+            color: var(--text-color);
+        }
+
+        .installation-guide ol li {
+            background-color: transparent; 
+            border-left: none; 
+            padding: 8px 0;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        /* App Using & More Earning Section (SLIDER) */
+        .earning-features {
+            margin-top: 50px;
+            text-align: center;
+            position: relative; 
+            padding-bottom: 40px;  
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            z-index: 10;  
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        .earning-card-slider {
+            display: flex;
+            width: 100%;
+            overflow: hidden;  
+            position: relative;
+            height: 400px;  
+            align-items: center;  
+            justify-content: center;  
+        }
+
+        .earning-card {
+            background-color: var(--card-background);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            text-align: left;
+            position: absolute; 
+            left: 50%;  
+            top: 50%;
+            transform: translate(-50%, -50%) translateX(100%);  
+            opacity: 0;
+            transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+            max-width: 600px;  
+            width: 90%;  
+            box-sizing: border-box;  
+        }
+
+        .earning-card.active {
+            transform: translate(-50%, -50%) translateX(0);  
+            opacity: 1;
+             
+        }
+
+        /* Hover glow effect (remains) */
+        .earning-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(0, 189, 212, 0.2) 0%, transparent 70%);
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .earning-card:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .earning-card h3 {
+            color: var(--accent-color);
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .earning-card p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .earning-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .earning-card ul li {
+            background-color: transparent; 
+            border-left: none;
+            padding: 5px 0;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+            color: var(--text-color);
+            display: flex;
+            align-items: flex-start;  
+            gap: 8px;
+        }
+
+        .earning-card ul li:before {
+            content: '✓';  
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;  
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--secondary-color);
+            text-align: left;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateX(3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-item h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .faq-item p {
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .button {
+                font-size: 1.1em;
+                padding: 15px 20px;
+                min-width: unset;
+                width: 80%;  
+                max-width: 300px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .qr-codes {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .qr-item img {
+                width: 120px;
+                height: 120px;
+            }
+
+            ul li {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding: 12px;
+                gap: 8px;  
+            }
+
+            ul li strong {
+                margin-bottom: 5px;
+                font-size: 1.2em; 
+            }
+
+            /* Earning Cards Responsive */
+            .earning-card-slider {
+                height: auto;  
+                min-height: 350px;  
+            }
+            .earning-card {
+                width: 95%;  
+                max-width: 95%; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p, ul li, .faq-item p, ol li, .earning-card p, .earning-card ul li {
+                font-size: 0.95em;
+            }
+
+            .button {
+                width: 95%;  
+                padding: 12px 15px;
+            }
+
+            .button img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .qr-item img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body> 
+     <button class="back-btn" id="backToMain">&larr;</button>
+    <div class="container">
+        <header>
+            <h1>📲 Download Our Mobile App – Unlock Your Earnings!</h1>
+            <p>It's time to take your crypto mining experience to the next level.</p>
+            <p>⚡ Download our **powerful and secure** mobile app now and start earning **2x more**—right in the palm of your hand!</p>
+            <p>Download, Log in, and Earn – **Easily, Securely, Every Day!**</p>
+        </header>
+
+        <section class="benefits">
+            <h2>🎯 6 Great Benefits of Using the App</h2>
+            <ul>
+                <li><strong>⚡ Fast & Stable Mining:</strong> Experience faster performance than the web version – no more slow loading!</li>
+                <li><strong>🔔 Exclusive In-App Earning System:</strong> A completely unique income flow! Here you'll find special mining opportunities + exclusive updates.</li>
+                <li><strong>🔒 Maximum Security:</strong> Your data, your income – everything is protected with military-grade encryption.</li>
+                <li><strong>📊 Smart User Interface:</strong> Easily manage your dashboard, games, tasks, and profile all within one app.</li>
+                <li><strong>🎁 In-App Exclusive Bonuses:</strong> Get surprise rewards just by logging in for the first time after downloading! Plus, daily earnings are significantly higher.</li>
+                <li><strong>🪙 Coin Shaking + Math Task Income:</strong> Earn without any investment! Simply shake your device and solve some math problems to earn 100% free.</li>
+            </ul>
+        </section>
+
+        <section class="earning-features">
+            <h2>💰 Earn More Using the App!</h2>
+            <p>The app isn't just for mining; it offers exciting features to boost your earning potential:</p>
+            <div class="slider-dots">
+                </div>
+            <div class="earning-card-slider">
+                <div class="earning-card active">
+                    <h3>Monthly $100 Bonus Reward</h3>
+                    <p>Every month, active app users have a chance to win up to $100 in bonus rewards. By using the app regularly, you too can become a part of this prize!</p>
+                </div>
+                <div class="earning-card">
+                    <h3>2x More Earnings</h3>
+                    <p>App users have the opportunity to earn 2 times more compared to web users. The app's optimized system and exclusive mining boosters will significantly increase your income.</p>
+                </div>
+                <div class="earning-card">
+                    <h3>Double Channel Income (Web + App)</h3>
+                    <p>Your income from both the website and the app platforms are calculated together. This increases your total earnings, and payments are processed collectively.</p>
+                </div>
+                <div class="earning-card">
+                    <h3>App-Exclusive "Coin Shaking"</h3>
+                    <p>A fantastic opportunity to earn without any investment! Simply shake your phone to collect coins. The more you shake, the more coins will be added to your account.</p>
+                </div>
+                <div class="earning-card">
+                    <h3>Math Task Income</h3>
+                    <p>Utilize your math skills to answer some simple questions correctly and win attractive prizes. This is another fun source of income for you!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="installation-guide">
+            <h2>📌 How to Use the App for More Earnings?</h2>
+            <ol>
+                <li>✅ Register with the same email – the one you used on the website.</li>
+                <li>✅ You must log in at least once every day.</li>
+                <li>✅ To be an active user, you must use the app for at least 20 minutes every 24 hours.</li>
+                <li>✅ Your mobile device must be connected to the internet while using the app.</li>
+            </ol>
+            <p><strong>Remember: By following these 5 rules, your income is 100% guaranteed and your earnings can increase by up to 2 times!</strong></p>
+        </section>
+
+        <section class="faq">
+            <h2>❓ Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-item">
+                <h3>1. Can I use both the website and the app?</h3>
+                <p>Yes, you can use both if you wish. However, the app offers exclusive features and more earning opportunities.</p>
+            </div>
+            <div class="faq-item">
+                <h3>2. Is it safe to install the app on my phone?</h3>
+                <p>Absolutely! Our app is built following the most advanced security standards, and you can remove your data anytime you wish.</p>
+            </div>
+            <div class="faq-item">
+                <h3>3. What is the size of the app?</h3>
+                <p>Typically, it's between 5-20 MB. So, no large storage is required.</p>
+            </div>
+            <div class="faq-item">
+                <h3>4. Can the coins earned from the app be converted to Dollar/USDT?</h3>
+                <p>Yes, 100%. Your earnings can be directly converted to USDT and withdrawn.</p>
+            </div>
+            <div class="faq-item">
+                <h3>5. If I mine from both the website and the app, will I get payment from both?</h3>
+                <p>Yes, if you earn on both platforms, your earnings will be calculated together, and you will receive USDT payment as a single user.</p>
+            </div>
+            <div class="faq-item">
+                <h3>6. Will the app work properly if my phone is slow?</h3>
+                <p>Our app is lightweight and highly optimized. It will run well even on phones with less RAM.</p>
+            </div>
+            <div class="faq-item">
+                <h3>7. Are there any charges or subscriptions for using the app?</h3>
+                <p>No, the app is completely free. You can start earning without any subscription or investment.</p>
+            </div>
+            <div class="faq-item">
+                <h3>8. What will I miss if I don't install the app?</h3>
+                <p>Yes! You will miss exclusive in-app bonuses, faster mining benefits, and app-special features—which are only for app users.</p>
+            </div>
+            <p>For more information, please visit our <a href="Support.html">support page</a>.</p>
+        </section>
+
+        <section class="download-section">
+            <h2>🌟 Download Now and Start Your Earning Journey –</h2>
+            <p>Double income + exclusive rewards await you, with no investment!</p>
+            <div class="download-buttons">
+                <a href="https://www.amazon.com/dp/B0DPDR4HG3" class="button android" target="_blank">
+                    <img src="/Clint/assest/images/toant_app_logo.jpg" alt="Android Logo">
+                    Download Android App
+                </a>
+            </div>
+            <div class="qr-codes">
+                <div class="qr-item">
+                    <img src="/Clint/assest/images/app_qr.png" alt="Android QR Code">
+                    <p>Scan for Android App</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // General download button tracking
+            const allDownloadButtons = document.querySelectorAll('.button.android, .button.ios');
+            allDownloadButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    console.log(`${button.textContent.trim()} button clicked!`);
+                    // Add your analytics tracking code here if needed
+                });
+            });
+ const backToMain = document.getElementById('backToMain');
+
+if (backToMain) {
+    backToMain.addEventListener('click', () => {
+        window.location.href = '/Clint/dashboard.html';
+    });
+}
+            // Slider logic for "Earn More Using the App" section
+            const slider = document.querySelector('.earning-card-slider');
+            const cards = document.querySelectorAll('.earning-card');
+            const dotsContainer = document.querySelector('.slider-dots');
+            let currentCardIndex = 0;
+            let autoSlideInterval;
+            const slideDuration = 2000; // 2 seconds
+
+            // Generate dots
+            cards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (index === 0) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.dot');
+
+            function showSlide(index, direction = 'next') {
+                // Ensure index is within bounds
+                index = (index + cards.length) % cards.length;
+
+                // Determine the starting position for the new slide
+                // If moving to the next slide, it comes from the right (100%)
+                // If moving to the previous slide, it comes from the left (-100%)
+                const exitTransform = direction === 'next' ? '-100%' : '100%';
+                const entryTransform = direction === 'next' ? '100%' : '-100%';
+
+                // First, reset all cards for the next transition
+                cards.forEach(card => {
+                    card.style.transition = 'none'; // Temporarily disable transition for reset
+                    card.classList.remove('active');
+                    // Reset position to be ready for the new animation direction
+                    card.style.transform = `translate(-50%, -50%) ${exitTransform}`;
+                    card.style.opacity = '0';
+                });
+
+                // Deactivate all dots
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                // Activate the new card and dot
+                const activeCard = cards[index];
+                const activeDot = dots[index];
+
+                if (activeCard) {
+                    // Set initial position for animation
+                    activeCard.style.transform = `translate(-50%, -50%) ${entryTransform}`;
+                    activeCard.style.opacity = '0';
+                    // Re-enable transition and trigger animation
+                    setTimeout(() => {
+                        activeCard.style.transition = 'transform 0.8s ease-in-out, opacity 0.8s ease-in-out';
+                        activeCard.classList.add('active');
+                        activeCard.style.transform = 'translate(-50%, -50%) translateX(0)';
+                        activeCard.style.opacity = '1';
+                    }, 50); // Small delay to ensure reset takes effect
+                }
+                if (activeDot) {
+                    activeDot.classList.add('active');
+                }
+
+                currentCardIndex = index;
+            }
+
+
+            function nextSlide() {
+                let newIndex = (currentCardIndex + 1);
+                showSlide(newIndex, 'next');
+            }
+
+            function goToSlide(index) {
+                // Determine direction for smooth transition
+                const direction = index > currentCardIndex ? 'next' : 'prev';
+                showSlide(index, direction);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide(); // Clear any existing interval
+                autoSlideInterval = setInterval(nextSlide, slideDuration);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Pause on hover, resume on mouse leave
+            if (slider) {
+                slider.addEventListener('mouseenter', stopAutoSlide);
+                slider.addEventListener('mouseleave', startAutoSlide);
+            }
+
+
+            // Initial slide display and start auto-play
+            showSlide(currentCardIndex);
+            startAutoSlide();
+
+            // Handle potential resize issues for centering cards
+            window.addEventListener('resize', () => {
+                showSlide(currentCardIndex); // Re-render current slide to adjust positioning
+            });
+        });
+    </script>
+</body>
+</html>

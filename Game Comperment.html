@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game & Earn - Play to Earn Crypto</title>
+    <!-- Blockchain/Crypto themed styling -->
+     <link rel="stylesheet" href="/Clint/assest/css/Game Comperment.css">
+</head>
+<body>
+    <button class="back-btn" id="backToMain">&larr;</button>
+    <div class="dashboard-container">
+        <div class="header">
+            <BR></BR>
+            <div class="logo">Game & Earn</div>
+            <div class="user-wallet">
+        </div>
+          
+        <div class="games-grid">
+            <!-- Game 1 -->
+            <div class="game-card">
+                <div class="blockchain-badge">NATA Chain</div>
+                <img src="/Clint/assest/images/coin_logo.jpg" class="game-image" alt="Crypto Adventure">
+                <div class="game-info">
+                    <h3 class="game-title">TOANT GAME</h3>
+                    <p class="game-description"> Plat this Game and Embark on a blockchain journey to collect rare NFTs and earn more tokens.</p>
+                    <div class="game-meta">
+                        <div class="rating">★★★★☆ (4.8)</div>
+                        <button class="play-btn" onclick="play()">Play Game</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Game 2 -->
+            <div class="game-card">
+                <div class="blockchain-badge"> NATA Chain</div>
+                <img src="/Clint/assest/images/toant_app_logo.jpg" class="game-image" alt="Token Tycoon">
+                <div class="game-info">
+                    <h3 class="game-title">TOANT APP GAME </h3>
+                    <p class="game-description">Build your crypto empire and earn TOANT rewards in this strategy game.</p>
+                    <div class="game-meta">
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <button class="play-btn">Play Game</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Game 3 -->
+            <div class="game-card">
+                <div class="blockchain-badge"> BTC </div>
+                <img src="/Clint/assest/images/coming soon photo.avif" class="game-image" alt="DeFi Defenders">
+                <div class="game-info">
+                    <h3 class="game-title">coming soon</p>
+                        <p class="game-description"> </p>
+                    <div class="game-meta">
+                        <div class="rating"> </div>
+                        <button class="play-btn">comming soon..</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Game 4 -->
+            <div class="game-card">
+                <div class="blockchain-badge">Ethereum</div>
+                <img src="/Clint/assest/images/coming soon photo.avif" class="game-image" alt="SOL Racer">
+                <div class="game-info">
+                    <h3 class="game-title">coming soon</h3>
+                    <p class="game-description"> </p>
+                    <div class="game-meta">
+                        <div class="rating"> </div>
+                        <button class="play-btn">coming soon..</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Game 5 -->
+            <div class="game-card">
+                <div class="blockchain-badge">BNB</div>
+                <img src="/Clint/assest/images/coming soon photo.avif" class="game-image" alt="SOL Racer">
+                <div class="game-info">
+                    <h3 class="game-title">coming soon</p>
+                        <p class="game-description"> </p>
+                    <div class="game-meta">
+                        <div class="rating"> </div>
+                        <button class="play-btn">coming soon..</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Game 6 -->
+            <div class="game-card">
+                <div class="blockchain-badge">Solana</div>
+                <img src="/Clint/assest/images/coming soon photo.avif" class="game-image" alt="SOL Racer">
+                <div class="game-info">
+                    <h3 class="game-title">coming soon</h3>
+                    <p class="game-description"></p>
+                    <div class="game-meta">
+                        <div class="rating"> </div>
+                        <button class="play-btn">coming soon..</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      // ------ Play button to game open ------ //
+
+function play(event) {
+    
+      window.location.assign('Home.html');
+    } 
+    const backToMain = document.getElementById('backToMain');
+
+if (backToMain) {
+    backToMain.addEventListener('click', () => {
+        window.location.href = '/Clint/dashboard.html';
+    });
+}
+    </script>
+</body>
+</html>
