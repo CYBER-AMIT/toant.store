@@ -38,7 +38,7 @@ const authRoutes = require("./authRoutes");
 const gameRoutes = require("./gameRoutes");
 const leaderboardRoutes = require("./leaderboardRoutes");
 const salaryAchievementRoutes = require("./salaryAchievementRoutes");
-const apiRoutes = require("./routes/api"); 
+const apiRoutes = require("./api"); 
 const walletRoutes = require("./walletRoutes"); 
 
 // --- NEW: Import support routes ---
