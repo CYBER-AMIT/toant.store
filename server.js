@@ -11,7 +11,7 @@ const path = require('path');  
 dotenv.config();
 const app = express();
 
-const verifyToken = require('./middleware/auth');  
+const verifyToken = require('./auth');  
  
 // ---- Middleware ---- //
 app.use(cors({
