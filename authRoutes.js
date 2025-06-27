@@ -1,7 +1,7 @@
 // server/routes/authRoutes.js //
 const express = require("express");
 const router = express.Router();
-const User = require("../models/User");
+const User = require("../User");
 console.log('🧪 User Model type:', typeof User); 
 console.log('🧪 User.findOne type:', typeof User.findOne)
 const bcrypt = require("bcryptjs");
