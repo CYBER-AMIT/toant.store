@@ -1,5 +1,5 @@
 // server/controllers/apiController.js
-const User = require('../User');
+const User = require('../models/User');
 const { Quiz, SocialTask } = require('../models/TaskModel'); 
 const Withdrawal = require('../models/WalletModel');
 const mongoose = require('mongoose');
