@@ -34,15 +34,15 @@ mongoose.connect(process.env.MONGODB_URI)
     .catch(err => console.error("MongoDB Error:", err));
 
 // ---- Routes ---- //
-const authRoutes = require("./routes/authRoutes");
-const gameRoutes = require("./routes/gameRoutes");
-const leaderboardRoutes = require("./routes/leaderboardRoutes");
-const salaryAchievementRoutes = require("./routes/salaryAchievementRoutes");
+const authRoutes = require("./authRoutes");
+const gameRoutes = require("./gameRoutes");
+const leaderboardRoutes = require("./leaderboardRoutes");
+const salaryAchievementRoutes = require("./salaryAchievementRoutes");
 const apiRoutes = require("./routes/api"); 
-const walletRoutes = require("./routes/walletRoutes"); 
+const walletRoutes = require("./walletRoutes"); 
 
 // --- NEW: Import support routes ---
-const supportRoutes = require('./routes/supportRoutes');
+const supportRoutes = require('./supportRoutes');
 // --- END NEW ---
 
 // Mount the routes to the application
